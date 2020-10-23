@@ -1,0 +1,58 @@
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class GradeBookTest {
+        private GradeBook g1;
+        private GradeBook g21;
+
+        @Before
+        public void setUp(){
+                g1 = new GradeBook(5);
+                g2 = new GradeBook(5);
+
+                g1.addScore(50);
+                g1.addScore(75);
+                g1.addScore(88);
+                g1.addScore(90);
+                g1.addScore(76);
+
+                g2.addScore(90);
+                g2.addScore(87);
+                g2.addScore(90);
+                g2.addScore(86);
+                g2.addScore(80);
+        }
+
+        @After
+        public void tearDown() {
+                g1 = null;
+                g2 = null;
+        }
+        @Test
+        public void testSum() {
+                assertEquals(379, g1.sum(), .0001);
+                assertEquals(432, g2.sum(), .0001);
+
+        }
+        @Test
+        public void testMinimum(
+                assertEquals(50, g1.minimum(), .001);
+                assertEquals(80, g2.minimum(), .001);
+
+        }
+        @Test
+        public void testAddScore() {
+                assertTrue(g1.toString().equals(“50 75 88 90 76”);
+                assertTrue(g2.toString().equals(“90 87 90 86 80”);
+
+        }
+        @Test
+        public void testfinalScore(){
+                asserTrue(329, g1.finalScore(), .001)
+                asserTrue(329, g1.finalScore(), .001)
+        }
+}
+
